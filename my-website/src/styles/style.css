@@ -1,8 +1,9 @@
-/* ...existing code... */
+/* Add Proxima Nova font import at the top */
+@import url('https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;600;700&display=swap');
 
 body {
   margin: 0;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
   background: #f4f6fa;
   color: #333;
 }
@@ -16,9 +17,18 @@ body {
   box-shadow: 0 2px 5px rgba(0,0,0,0.04);
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center vertically and horizontally within its container */
+  height: 48px; /* Adjust as needed for your navbar height */
+  gap: 8px;
+}
+
 .logo img {
-  width: 32px;
-  height: 32px;
+  width: 22px;   /* Make logo skinnier */
+  height: 32px;  /* Keep height the same for vertical alignment */
+  object-fit: contain; /* Preserve aspect ratio */
 }
 
 .logo span {
@@ -26,14 +36,16 @@ body {
   font-size: 1.2rem;
   color: #333;
   margin-left: 8px;
+  font-family: 'Didot', serif;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 32px;
-  margin: 0;
+  gap: 28px;           /* Increased gap for more spacing between links */
+  margin: 0 0 0 4px;
   padding: 0;
+  align-items: center;
 }
 
 nav a {
@@ -41,6 +53,7 @@ nav a {
   color: #222;
   font-weight: 500;
   font-size: 1rem;
+  font-family: 'Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .auth-buttons {
@@ -159,8 +172,9 @@ nav a {
 }
 
 .hero-right img {
-  width: 370px;
+  width: 520px;
   max-width: 100%;
+  height: 340px;
   border-radius: 10px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.10);
   object-fit: cover;
@@ -222,8 +236,9 @@ nav a {
   width: 28px;
   height: 28px;
   border-radius: 6px;
-  background: #ffe066;
-  object-fit: contain;
+  background: none;      /* Remove yellow background */
+  object-fit: cover;     /* Ensure the logo fills the box */
+  padding: 0;            /* Remove any padding */
 }
 
 .donor-name {
@@ -290,5 +305,3 @@ nav a {
     padding: 16px 8px 12px 8px;
   }
 }
-
-/* ...existing code... */
